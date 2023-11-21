@@ -90,13 +90,19 @@ void cargarDatosVuelo(string nombreArchivo, Grafo<Aeropuerto, Vuelo>& grafo){
 
             if (contador < 10)
             {
-                cout<<"que imprimes"<<codAeropuertoI<<" "<<codAeropuertoJ<<" "<<stiempoProm<<endl;
+                cout<<"que imprimes "<<codAeropuertoI<<" "<<codAeropuertoJ<<" "<<stiempoProm<<endl;
             }
             
             
             float tiempoProm = stof(stiempoProm);
             float precio = stof(sprecio);
             int cantVuelos = stoi(scantVuelos);
+
+            
+            if (contador < 10)
+            {
+                cout<<"que impreso "<<codAeropuertoI<<" "<<codAeropuertoJ<<" "<<tiempoProm<<endl;
+            }
 
             grafo.agregarArista(codAeropuertoI, codAeropuertoJ, tiempoProm, precio, cantVuelos);
         }
