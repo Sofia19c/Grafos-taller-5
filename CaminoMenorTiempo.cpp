@@ -51,18 +51,18 @@ pair<vector<float>, vector<int>> dijkstra (Grafo<Aeropuerto,Vuelo> *grafo, int n
     //cout<<"Este es el nodo origen"<<nodoOrigen<<endl;
     for(int i = 0; i < listaAeropuertos.size()-1 ; i++){  
         int siguiente = distanciaMinima (dist, visitados);
-        cout<<"uwu"<<siguiente<<endl;
+        //cout<<"uwu"<<siguiente<<endl;
         if(siguiente != -1){
             //cout<<"if"<<endl;
             visitados[siguiente] = true;
             vector<pair<int,Vuelo>> adyacentes = aeropuertosAdyacentes(listaVuelos, listaAeropuertos, siguiente);
             for(int j = 0; j < adyacentes.size(); j++){
-                cout<<"impreso"<<adyacentes[j].first<<endl;
-                cout<<"text "<< dist[obtenerDestino(listaAeropuertos, adyacentes[j].second)]<<endl;
-                cout<<"a "<< obtenerDestino(listaAeropuertos, adyacentes[j].second)<<endl;
-                cout<<"vuelo "<<adyacentes[j].second.getAeropuertoI()<<adyacentes[j].second.getAeropuertoJ()<<adyacentes[j].second.getTiempoProm()<<endl;
+                //cout<<"impreso"<<adyacentes[j].first<<endl;
+                //cout<<"text "<< dist[obtenerDestino(listaAeropuertos, adyacentes[j].second)]<<endl;
+                //cout<<"a "<< obtenerDestino(listaAeropuertos, adyacentes[j].second)<<endl;
+                //cout<<"vuelo "<<adyacentes[j].second.getAeropuertoI()<<adyacentes[j].second.getAeropuertoJ()<<adyacentes[j].second.getTiempoProm()<<endl;
                 if(dist[siguiente] + adyacentes[j].second.getTiempoProm() < dist[obtenerDestino(listaAeropuertos, adyacentes[j].second)]){
-                    cout<<"tiempo arista"<<adyacentes[j].second.getTiempoProm()<<"tiempo predesesor"<<dist[siguiente]<<endl;
+                    //cout<<"tiempo arista"<<adyacentes[j].second.getTiempoProm()<<"tiempo predesesor"<<dist[siguiente]<<endl;
 
                     dist[adyacentes[j].first] = dist[siguiente] + adyacentes[j].second.getTiempoProm();
 
