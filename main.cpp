@@ -32,7 +32,6 @@ int main() {
 
         case 2:
             mostrarRutaRapida(grafo);
-            cout << "Ruta mas rapida" << endl;
             break;
 
         case 0:
@@ -140,5 +139,6 @@ void mostrarRutaRapida(Grafo<Aeropuerto, Vuelo>& grafo){
         cout<<" ";
         cout<<camino.first[i];
     }
+    cout<<" "<<endl;
     
 }
