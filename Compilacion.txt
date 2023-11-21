@@ -1,1 +1,1 @@
-g++ -std=c++11 -o sistAeropuerto Aeropuerto.cpp Vuelo.cpp Vertice.cpp Arista.cpp Grafo.cpp main.cpp
+g++ -std=c++11 -o sistAeropuerto Aeropuerto.cpp Vuelo.cpp Vertice.cpp Arista.cpp Grafo.cpp CaminoMenorTiempo.cpp main.cpp 
