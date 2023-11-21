@@ -36,7 +36,7 @@ public:
 
   void ruta_corta_distancia(const string &origen, const string &destino) const;
    
-  double calcularDistancia(int x1, int y1, int x2, int y2);
+  double calcularDistancia(int x1, int y1, int x2, int y2) const;
 
 
 };

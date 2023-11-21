@@ -142,7 +142,7 @@ void Grafo<T, O>::ruta_corta_distancia(const string &origen, const string &desti
 }
 
 template <typename T, typename O>
-double Grafo<T, O>::calcularDistancia(int x1, int y1, int x2, int y2) {
+double Grafo<T, O>::calcularDistancia(int x1, int y1, int x2, int y2) const {
     double distancia = sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));
     return distancia;
 }
