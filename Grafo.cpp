@@ -168,6 +168,7 @@ pair<vector<int>, float> Grafo<Aeropuerto, Vuelo>::caminoMasRapido (string nodoO
     {
         if (aeropuertos[i].getDato().getCodigoAeropuerto()== nodoOrigen)
         {
+            cout<<"aeropuerto de origen: "<<aeropuertos[i].getDato().getCiudad()<<endl;
             origen = i;
         }
         
@@ -178,6 +179,7 @@ pair<vector<int>, float> Grafo<Aeropuerto, Vuelo>::caminoMasRapido (string nodoO
     {
         if (aeropuertos[i].getDato().getCodigoAeropuerto()== nodoDestino)
         {
+            cout<<"aeropuerto de destino: "<<aeropuertos[i].getDato().getCiudad()<<endl;
             destino = i;
         }
         
