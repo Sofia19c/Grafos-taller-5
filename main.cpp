@@ -19,7 +19,8 @@ int main() {
     do {
         cout << "Seleccione una opcion:" << endl;
         cout << "1. Ruta mas corta en distancia" << endl;
-        cout << "2. Salir" << endl;
+        cout << "2. Ruta mas rapida" << endl;
+        cout << "0- Salir" <<endl;
         cin >> opcion;
 
         switch (opcion)
@@ -29,14 +30,18 @@ int main() {
             break;
 
         case 2:
-            cout << "Saliendo..." << endl;
+            cout << "Ruta mas rapida" << endl;
+            break;
+
+        case 0:
+            cout<< "Saliendo..."<<endl;
             break;    
         
         default:
             cout << "Opcion invalida. Intente de nuevo" << endl;
             break;
         }
-    } while (opcion != 2);
+    } while (opcion != 0);
 
     return 0;
 }
