@@ -10,7 +10,7 @@ pair<vector<int>, float> calculoCaminoMasRapido (Grafo<Aeropuerto,Vuelo> *grafo,
 //nodo de origen
 pair<vector<float>, vector<int>> dijkstra (Grafo<Aeropuerto,Vuelo> *grafo, int nodoOrigen);
 
-vector<int> aeropuertosAdyacentes (vector<Arista<Vuelo>> listaVuelos , vector<Vertice<Aeropuerto>> listaAeropuertos, int verticeActual);
+vector<pair<int,Vuelo>> aeropuertosAdyacentes (vector<Arista<Vuelo>> listaVuelos , vector<Vertice<Aeropuerto>> listaAeropuertos, int verticeActual);
 
 int distanciaMinima(vector<float> distance, vector<bool> visitados);
 

@@ -57,7 +57,7 @@ pair<vector<float>, vector<int>> dijkstra (Grafo<Aeropuerto,Vuelo> *grafo, int n
             visitados[siguiente] = true;
             vector<pair<int,Vuelo>> adyacentes = aeropuertosAdyacentes(listaVuelos, listaAeropuertos, siguiente);
             for(int j = 0; j < adyacentes.size(); j++){
-                cout<<"impreso"<<adyacentes[j]<<endl;
+                cout<<"impreso"<<adyacentes[j].first<<endl;
                 if(dist[siguiente] + adyacentes[j].second.getTiempoProm() < dist[obtenerDestino(listaAeropuertos, adyacentes[j].second)]){
                     cout<<"tiempo arista"<<adyacentes[j].second.getTiempoProm()<<"tiempo predesesor"<<dist[siguiente]<<endl;
 
@@ -75,9 +75,9 @@ pair<vector<float>, vector<int>> dijkstra (Grafo<Aeropuerto,Vuelo> *grafo, int n
     return make_pair(dist, predecesor);
 }
 
-vector<int> aeropuertosAdyacentes (vector<Arista<Vuelo>> listaVuelos , vector<Vertice<Aeropuerto>> listaAeropuertos, int verticeActual){
+vector<pair<int,Vuelo>> aeropuertosAdyacentes (vector<Arista<Vuelo>> listaVuelos , vector<Vertice<Aeropuerto>> listaAeropuertos, int verticeActual){
     
-    vector<int> aeropuertos;
+    vector<pair<int,Vuelo>> aeropuertos;
 
     for (int i = 0; i < listaVuelos.size(); i++)
     {
@@ -89,7 +89,7 @@ vector<int> aeropuertosAdyacentes (vector<Arista<Vuelo>> listaVuelos , vector<Ve
             for (int j = 0; j < listaAeropuertos.size(); j++)
             {
                 if(listaAeropuertos[j].getDato().getCodigoAeropuerto() == aeropuertoDestino){
-                    aeropuertos.push_back(j);
+                    aeropuertos.push_back(make_pair(j, listaVuelos[i].getDato()));
                 }
             }
         }    
