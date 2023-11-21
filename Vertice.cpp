@@ -18,3 +18,5 @@ Vertice<T>::Vertice(string ciudad, string codigo_aeropuerto, float latitud, floa
 
 template<typename T>
 Vertice<T>::Vertice() {}
+
+template class Vertice<Aeropuerto>;
