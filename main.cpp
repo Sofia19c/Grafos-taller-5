@@ -86,7 +86,7 @@ void cargarDatosVuelo(string nombreArchivo, Grafo<Aeropuerto, Vuelo>& grafo){
             getline(ss, sprecio, ',');
             getline(ss, scantVuelos, ',');
 
-            cout<<"que imprimes"<<stiempoProm<<endl;
+            cout<<"que imprimes"<<codAeropuertoI<<" "<<codAeropuertoJ<<" "<<stiempoProm<<endl;
             float tiempoProm = stof(stiempoProm);
             float precio = stof(sprecio);
             int cantVuelos = stoi(scantVuelos);
