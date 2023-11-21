@@ -16,3 +16,5 @@ Arista<T>::Arista(string &aeropuertoI, string &aeropuertoJ, float tiempoProm, fl
     dato = vuelo;
 
 }
+
+template class Arista<Vuelo>;
