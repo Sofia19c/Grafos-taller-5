@@ -115,7 +115,7 @@ int distanciaMinima(vector<float> distance, vector<bool> visitados){
 }
 
 int obtenerDestino(vector<Vertice<Aeropuerto>> listaAeropuertos, Vuelo vuelo){
-    string codigoAeropuerto = vuelo.getAeropuertoI();
+    string codigoAeropuerto = vuelo.getAeropuertoJ();
 
     for ( int i = 0; i < listaAeropuertos.size(); i++)
     {
