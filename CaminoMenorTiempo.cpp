@@ -57,8 +57,9 @@ pair<vector<float>, vector<int>> dijkstra (Grafo<Aeropuerto,Vuelo> *grafo, int n
             visitados[siguiente] = true;
             vector<int> adyacentes = aeropuertosAdyacentes(listaVuelos, listaAeropuertos, siguiente);
             for(int j = 0; j < adyacentes.size(); j++){
-                //cout<<"impreso"<<adyacentes[j]<<endl;
+                cout<<"impreso"<<adyacentes[j]<<endl;
                 if(dist[siguiente] + listaVuelos[adyacentes[j]].getDato().getTiempoProm() < dist[obtenerDestino(listaAeropuertos, listaVuelos[adyacentes[j]].getDato())]){
+                    cout<<"tiempo arista"<<listaVuelos[adyacentes[j]].getDato().getTiempoProm()<<"tiempo predesesor"<<dist[siguiente]<<endl;
 
                     dist[adyacentes[j]] = dist[siguiente] + listaVuelos[adyacentes[j]].getDato().getTiempoProm();
 
