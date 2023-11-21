@@ -49,7 +49,7 @@ pair<vector<float>, vector<int>> dijkstra (Grafo<Aeropuerto,Vuelo> *grafo, int n
     //2. Se fija el vertice no fijado aun que esta a una menor distancia del inicial
     
     //cout<<"Este es el nodo origen"<<nodoOrigen<<endl;
-    for(int i = 0; i < 10 ; i++){ // TO DO ponerle listaAeropuertos.size()-1 de nuevo
+    for(int i = 0; i < listaAeropuertos.size()-1 ; i++){ 
         int siguiente = distanciaMinima (dist, visitados);
         cout<<"uwu"<<siguiente<<endl;
         if(siguiente != -1){
