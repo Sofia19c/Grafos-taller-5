@@ -1,7 +1,15 @@
 #include "CaminoMenorTiempo.h"
+#include <iostream>
 
 pair<vector<int>, float> calculoCaminoMasRapido (Grafo<Aeropuerto,Vuelo> *grafo, int nodoOrigen, int nodoDestino){
     pair<vector<float>, vector<int>> tabla = dijkstra(grafo, nodoOrigen);
+
+    for (int i = 0; i < tabla.first.size(); i++)
+    {
+        cout<<tabla.first[i]<<"-"<<tabla.second[i]<<endl;
+    }
+    
+
     vector<float> dist = tabla.first;
     vector<int> predecesores = tabla.second;
     vector<int> camino;
