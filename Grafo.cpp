@@ -12,13 +12,13 @@
 template<typename T, typename O>
 Grafo<T, O>::Grafo() {}
 
-
+/*
 template<typename T, typename O>
 Grafo<T, O>::Grafo(vector<T> listaVertices, vector<O> listaAristas) {
     this->listaVertices = listaVertices;
     this->listaAristas = listaAristas;
 }
-
+*/
 
 
 template<typename T, typename O>
