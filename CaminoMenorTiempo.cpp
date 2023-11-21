@@ -83,7 +83,14 @@ vector<int> aeropuertosAdyacentes (vector<Arista<Vuelo>> listaVuelos , vector<Ve
         if (listaVuelos[i].getDato().getAeropuertoI() ==  listaAeropuertos[verticeActual].getDato().getCodigoAeropuerto())
         {
             cout<<"aeropuerto"<<listaVuelos[i].getDato().getAeropuertoI()<<endl;
-            aeropuertos.push_back(i);
+            string aeropuertoDestino = listaVuelos[i].getDato().getAeropuertoJ();
+
+            for (int j = 0; j < listaAeropuertos.size(); j++)
+            {
+                if(listaAeropuertos[j].getDato().getCodigoAeropuerto() == aeropuertoDestino){
+                    aeropuertos.push_back(j);
+                }
+            }
         }    
     }
     return aeropuertos;
