@@ -32,8 +32,6 @@ public:
                      float precio, int cantVuelos);
   void eliminarArista(string idI, string idJ);
 
-  vector<Vertice<T>> obtenerVertices() { return listaVertices; }
-
   void ruta_corta_distancia(const string &origen, const string &destino) const;
    
   double calcularDistancia(int x1, int y1, int x2, int y2) const;
