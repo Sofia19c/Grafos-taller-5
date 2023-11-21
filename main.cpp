@@ -133,7 +133,7 @@ void mostrarRutaRapida(Grafo<Aeropuerto, Vuelo>& grafo){
     pair<vector<int>, float> camino = grafo.caminoMasRapido(origen, destino);
 
     cout<<"Costo del camino: "<<camino.second<<endl;
-
+    cout<<"Ruta: "<<endl;
     vector<Vertice<Aeropuerto>> aeropuertos = grafo.obtenerVertices();
     for (int i = 0; i < camino.first.size(); i++)
     {
