@@ -136,8 +136,11 @@ void mostrarRutaRapida(Grafo<Aeropuerto, Vuelo>& grafo){
     cout<<"Ruta: "<<endl;
     vector<Vertice<Aeropuerto>> aeropuertos = grafo.obtenerVertices();
     for (int i = 0; i < camino.first.size(); i++)
-    {
-        cout<<" -> ";
+    {   
+        if (i != 0)
+        {
+            cout<<" -> ";
+        }
         cout<<aeropuertos[camino.first[i]].getDato().getCodigoAeropuerto();
     }
     cout<<" "<<endl;
