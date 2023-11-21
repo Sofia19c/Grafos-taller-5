@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <limits>
 
-pair<vector<int>, float> caminoMasRapido (Grafo<Aeropuerto,Vuelo>& grafo, int nodoOrigen, int nodoDestino);
+pair<vector<int>, float> calculoCaminoMasRapido (Grafo<Aeropuerto,Vuelo>& grafo, int nodoOrigen, int nodoDestino);
 
 //necesito: necesito los vertices , las aristas y el peso de las aristas
 //nodo de origen

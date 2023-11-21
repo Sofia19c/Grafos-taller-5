@@ -158,4 +158,9 @@ vector<Vertice<T>> Grafo<T,O>::obtenerVertices(){
     return this->listaVertices;
 }
 
+
+pair<vector<int>, float> Grafo<Aeropuerto, Vuelo>::caminoMasRapido (int nodoOrigen, int nodoDestino){
+    return calculoCaminoMasRapido(this, nodoOrigen, nodoDestino);
+}
+
 template class Grafo<Aeropuerto,Vuelo>;

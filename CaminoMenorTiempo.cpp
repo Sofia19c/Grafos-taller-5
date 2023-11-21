@@ -1,6 +1,6 @@
 #include "CaminoMenorTiempo.h"
 
-pair<vector<int>, float> caminoMasRapido (Grafo<Aeropuerto,Vuelo>& grafo, int nodoOrigen, int nodoDestino){
+pair<vector<int>, float> calculoCaminoMasRapido (Grafo<Aeropuerto,Vuelo>& grafo, int nodoOrigen, int nodoDestino){
     pair<vector<float>, vector<int>> tabla = dijkstra(grafo, nodoOrigen);
     vector<float> dist = tabla.first;
     vector<int> predecesores = tabla.second;
