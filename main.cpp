@@ -76,7 +76,9 @@ void cargarDatosVuelo(string nombreArchivo, Grafo<Aeropuerto, Vuelo>& grafo){
     ifstream archivo(nombreArchivo);
     if (archivo.is_open()) {
         string linea;
+        int contador = 0;
         while (getline(archivo, linea)) {
+            contador++;
             istringstream ss(linea);
             string codAeropuertoI, codAeropuertoJ, stiempoProm, sprecio, scantVuelos;
 
@@ -86,7 +88,12 @@ void cargarDatosVuelo(string nombreArchivo, Grafo<Aeropuerto, Vuelo>& grafo){
             getline(ss, sprecio, ',');
             getline(ss, scantVuelos, ',');
 
-            cout<<"que imprimes"<<codAeropuertoI<<" "<<codAeropuertoJ<<" "<<stiempoProm<<endl;
+            if (contador < 10)
+            {
+                cout<<"que imprimes"<<codAeropuertoI<<" "<<codAeropuertoJ<<" "<<stiempoProm<<endl;
+            }
+            
+            
             float tiempoProm = stof(stiempoProm);
             float precio = stof(sprecio);
             int cantVuelos = stoi(scantVuelos);
