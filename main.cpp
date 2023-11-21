@@ -124,7 +124,14 @@ void mostrarRutaCorta(const Grafo<Aeropuerto, Vuelo>& grafo) {
 }
 
 void mostrarRutaRapida(Grafo<Aeropuerto, Vuelo>& grafo){
-    pair<vector<int>, float> camino = grafo.caminoMasRapido("ABI", "DFW");
+
+    std::string origen, destino;
+    std::cout << "Ingrese el aeropuerto de origen: ";
+    std::cin >> origen;
+    std::cout << "Ingrese el aeropuerto de destino: ";
+    std::cin >> destino;
+
+    pair<vector<int>, float> camino = grafo.caminoMasRapido(origen, destino);
 
     cout<<"Costo del camino: "<<camino.second<<endl;
 
