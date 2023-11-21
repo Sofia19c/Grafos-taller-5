@@ -1,6 +1,6 @@
 #include "CaminoMenorTiempo.h"
 
-pair<vector<int>, float> calculoCaminoMasRapido (Grafo<Aeropuerto,Vuelo>& grafo, int nodoOrigen, int nodoDestino){
+pair<vector<int>, float> calculoCaminoMasRapido (Grafo<Aeropuerto,Vuelo> *grafo, int nodoOrigen, int nodoDestino){
     pair<vector<float>, vector<int>> tabla = dijkstra(grafo, nodoOrigen);
     vector<float> dist = tabla.first;
     vector<int> predecesores = tabla.second;
@@ -22,9 +22,9 @@ pair<vector<int>, float> calculoCaminoMasRapido (Grafo<Aeropuerto,Vuelo>& grafo,
 
 //necesito: necesito los vertices , las aristas y el peso de las aristas
 //nodo de origen
-pair<vector<float>, vector<int>> dijkstra (Grafo<Aeropuerto,Vuelo>& grafo, int nodoOrigen){
-    vector<Arista<Vuelo>> listaVuelos = grafo.obtenerAristas();
-    vector<Vertice<Aeropuerto>> listaAeropuertos = grafo.obtenerVertices();
+pair<vector<float>, vector<int>> dijkstra (Grafo<Aeropuerto,Vuelo> *grafo, int nodoOrigen){
+    vector<Arista<Vuelo>> listaVuelos = grafo->obtenerAristas();
+    vector<Vertice<Aeropuerto>> listaAeropuertos = grafo->obtenerVertices();
     vector<float> dist(listaAeropuertos.size(),numeric_limits<float>::infinity());
     vector<bool> visitados(listaAeropuertos.size(), false);
     vector<int> predecesor(listaAeropuertos.size(),-1);
