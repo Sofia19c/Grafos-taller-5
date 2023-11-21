@@ -38,6 +38,9 @@ public:
    
   double calcularDistancia(int x1, int y1, int x2, int y2) const;
 
+  vector<Arista<O>> obtenerAristas();
+  vector<Vertice<T>> obtenerVertices();
+
 
 };
 
