@@ -39,7 +39,7 @@ public:
   vector<Arista<O>> obtenerAristas();
   vector<Vertice<T>> obtenerVertices();
 
-  pair<vector<int>, float> caminoMasRapido (int nodoOrigen, int nodoDestino);
+  pair<vector<int>, float> caminoMasRapido (string nodoOrigen, string nodoDestino);
 };
 
 #endif // GRAFOS_GRAFO_H

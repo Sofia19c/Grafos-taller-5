@@ -159,8 +159,31 @@ vector<Vertice<T>> Grafo<T,O>::obtenerVertices(){
 }
 
 template<>
-pair<vector<int>, float> Grafo<Aeropuerto, Vuelo>::caminoMasRapido (int nodoOrigen, int nodoDestino){
-    return calculoCaminoMasRapido(this, nodoOrigen, nodoDestino);
+pair<vector<int>, float> Grafo<Aeropuerto, Vuelo>::caminoMasRapido (string nodoOrigen, string nodoDestino){
+    
+    vector<Vertice<Aeropuerto>> aeropuertos = this->obtenerVertices();
+
+    int origen;
+    for (int i = 0; i < aeropuertos.size(); i++)
+    {
+        if (aeropuertos[i].getDato().getCodigoAeropuerto()== nodoOrigen)
+        {
+            origen = i;
+        }
+        
+    }
+
+    int destino;
+    for (int i = 0; i < aeropuertos.size(); i++)
+    {
+        if (aeropuertos[i].getDato().getCodigoAeropuerto()== nodoDestino)
+        {
+            destino = i;
+        }
+        
+    }
+    
+    return calculoCaminoMasRapido(this, origen, destino);
 }
 
 template class Grafo<Aeropuerto,Vuelo>;

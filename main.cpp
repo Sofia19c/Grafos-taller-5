@@ -7,6 +7,7 @@
 void cargarDatosVuelo(string nombreArchivo, Grafo<Aeropuerto, Vuelo>& grafo);
 void cargarDatosAeropuertos(string nombreArchivo, Grafo<Aeropuerto, Vuelo>& grafo);
 void mostrarRutaCorta(const Grafo<Aeropuerto, Vuelo>& grafo);
+void mostrarRutaRapida(Grafo<Aeropuerto, Vuelo>& grafo);
 
 
 int main() {
@@ -30,6 +31,7 @@ int main() {
             break;
 
         case 2:
+            mostrarRutaRapida(grafo);
             cout << "Ruta mas rapida" << endl;
             break;
 
@@ -105,4 +107,8 @@ void mostrarRutaCorta(const Grafo<Aeropuerto, Vuelo>& grafo) {
     std::cin >> destino;
 
     grafo.ruta_corta_distancia(origen, destino);
+}
+
+void mostrarRutaRapida(Grafo<Aeropuerto, Vuelo>& grafo){
+    grafo.caminoMasRapido("AMA", "ALO");
 }
