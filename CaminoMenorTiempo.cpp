@@ -4,10 +4,10 @@
 pair<vector<int>, float> calculoCaminoMasRapido (Grafo<Aeropuerto,Vuelo> *grafo, int nodoOrigen, int nodoDestino){
     pair<vector<float>, vector<int>> tabla = dijkstra(grafo, nodoOrigen);
 
-    for (int i = 0; i < tabla.first.size(); i++)
+    /*for (int i = 0; i < tabla.first.size(); i++)
     {
         cout<<tabla.first[i]<<"-"<<tabla.second[i]<<endl;
-    } 
+    } */
     
 
     vector<float> dist = tabla.first;
@@ -51,7 +51,7 @@ pair<vector<float>, vector<int>> dijkstra (Grafo<Aeropuerto,Vuelo> *grafo, int n
     //cout<<"Este es el nodo origen"<<nodoOrigen<<endl;
     for(int i = 0; i < listaAeropuertos.size() - 1; i++){
         int siguiente = distanciaMinima (dist, visitados);
-        //cout<<"uwu"<<siguiente<<endl;
+        cout<<"uwu"<<siguiente<<endl;
         if(siguiente != -1){
             //cout<<"if"<<endl;
             visitados[siguiente] = true;
